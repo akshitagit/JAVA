@@ -25,8 +25,13 @@ class InsertionSort {
   
     public static void main(String args[]) 
     { 
-        int arr[] = { 10, 9, 8, 3, 1, 2 }; 
-  
+        Scanner sc = new Scannner(System.in);
+        int n =sc.nextInt();
+        int[] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]= sc.nextInt();
+        }
+        
         InsertionSort ob = new InsertionSort(); 
         ob.sort(arr); 
   

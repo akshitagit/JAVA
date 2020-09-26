@@ -26,33 +26,38 @@ Yes
 public class BalanceParentheses {
 
     // Characters
-    static char curlyOpen = '{';
-    static char curlyClose = '}';
-    static char bracketOpen = '[';
-    static char bracketClose = ']';
-    static char parenthesesOpen = '(';
-    static char parenthesesClose = ')';
+    final static char curlyOpen = '{';
+    final static char curlyClose = '}';
+    final static char bracketOpen = '[';
+    final static char bracketClose = ']';
+    final static char parenthesesOpen = '(';
+    final static char parenthesesClose = ')';
 
     public static void balanceParentheses(String brackets) {
 
         String result = "";
-        String balanceString = "";
+        ArrayList<String> balanceList = new ArrayList<String>();
 
-        for (int i = 0; i <= brackets.length()-1; i++) {
-            // if bracket is an open character, add it to the balanceList
+        for (int i = 0; i <= lastIndexOf(brackets.length()); i++) {
+
             char c = brackets.charAt(i);
-            if (isOpen(c)) {
-                balanceString += c;
+            if (isOpen(c)) { // if c is an open character, add it to the balanceList
+                balanceList.add(String.valueOf(c));
+            } else { // if c is a closed character and a match for the last character in balanceList, remove it
+                if (isBalanced(balanceList, c)) {
+                    int last = lastIndexOf(balanceList.size());
+                    balanceList.remove(last);
+                } else { // irrevocably unbalanced, c is a close character without a preceding open character
+                    balanceList.add(String.valueOf(c));
+                }
             }
-
-            //if a char is a close character and it is match for the last character in the balanceList, pop the open character.
-
-            //else result = "No"
         }
 
-        //if balanceList is empty, result = "Yes";
-
-        // else, result = "No";
+        if (balanceList.isEmpty()) {
+            result = yes();
+        } else {
+            result = no();
+        }
 
 		System.out.println("result: " + result);
     }
@@ -64,6 +69,40 @@ public class BalanceParentheses {
         else {
             return false;
         }
+    }
+
+    public static Boolean isBalanced(ArrayList<String> balanceList, char c) {
+
+        int last = lastIndexOf(balanceList.size());
+        if (last >= 0) {
+            String endOfBalanceList = balanceList.get(last);
+
+            String match = String.valueOf(matchOf(c));
+
+            if (endOfBalanceList.compareTo(match) == 0) {
+                return true;
+            }
+        }
+
+        return false;
+
+    }
+
+    public static char matchOf(char c) {
+        switch(c) {
+            case curlyClose:
+                return curlyOpen;
+            case bracketClose:
+                return bracketOpen;
+            case parenthesesClose:
+                return parenthesesOpen;
+            default:
+                return c;
+        }
+    }
+
+    public static int lastIndexOf(int size) {
+        return size-1;
     }
 
     public static String yes() {

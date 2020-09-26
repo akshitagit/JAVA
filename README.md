@@ -1,4 +1,10 @@
 # JAVA
+
+![Issues](https://img.shields.io/github/issues/akshitagit/JAVA)
+![Pull Requests](https://img.shields.io/github/issues-pr/akshitagit/JAVA)
+![Forks](https://img.shields.io/github/forks/akshitagit/JAVA)
+![Stars](https://img.shields.io/github/stars/akshitagit/JAVA)
+
 ## Open Repository For Students to Contribute Algorithms and Data Structures in different Languages
 
 ## This Repository is meant for everyone to create code and learn to contribute to open source

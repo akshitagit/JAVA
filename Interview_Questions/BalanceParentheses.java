@@ -25,7 +25,7 @@ public class BalanceParentheses {
 
     public static void balanceParentheses(String brackets) {
 
-        //Characters
+        // Characters
         String curlyOpen = "{";
         String curlyClose = "}";
         String bracketOpen = "[";
@@ -35,16 +35,19 @@ public class BalanceParentheses {
 
         String result = "";
 
-        //@TODO - determine if brackets is balanced
+        // @TODO - determine if brackets is balanced
 
 		System.out.println("result: " + result);
     }
 
 	public static void main(String[] args) {
-        balanceParentheses("(())");      //balanced
-        balanceParentheses("(())()");    //balanced
-        balanceParentheses("())(");      // not balanced
-        balanceParentheses("(()))");     //not balanced
+	    balanceParentheses("(())");             // Yes
+        balanceParentheses("(())");             // Yes
+        balanceParentheses("(())()");           // Yes
+        balanceParentheses("())(");             // No
+        balanceParentheses("(()))");            // No
+        balanceParentheses("[()]{}{[()()]()}"); // Yes
+        balanceParentheses("{[(])");            // No
 
 	}
 

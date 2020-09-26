@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 https://github.com/akshitagit/JAVA/issues/46
 You are given a string of brackets i.e. '{', '}' , '(' , ')', '[' , ']' .
@@ -31,11 +33,22 @@ public class BalanceParentheses {
         String bracketOpen = "[";
         String bracketClose = "]";
         String parenthesesOpen = "(";
-        String parentheseClose = ")";
+        String parenthesesClose = ")";
 
         String result = "";
+        ArrayList<String> balanceList = new ArrayList<String>();
 
-        // @TODO - determine if brackets is balanced
+        for (int i = 0; i <= brackets.length()-1; i++) {
+            // if bracket is an open character, add it to the balanceList
+
+            //if a char is a close character and it is match for the last character in the balanceList, pop the open character.
+
+            //else result = "No"
+        }
+
+        //if balanceList is empty, result = "Yes";
+
+        // else, result = "No";
 
 		System.out.println("result: " + result);
     }

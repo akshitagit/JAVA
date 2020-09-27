@@ -7,7 +7,7 @@ final class Node<T> {
         this.data = param;
     }
 
-    public void preorder(){
+    public void preorder() {
         System.out.print(this.data+" ");
         if(this.left!=null)
             this.left.preorder();

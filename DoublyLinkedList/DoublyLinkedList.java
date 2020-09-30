@@ -1,6 +1,6 @@
 public class DoublyLinkedList {
-    private Node Head;
-    private Node Tail;
+    private Link Head;
+    private Link Tail;
 
     public DoublyLinkedList() {
         Head = null;
@@ -12,7 +12,7 @@ public class DoublyLinkedList {
     }
 
     public void InsertFirst(int data) {
-        Node node = new Node ( data );
+        Link node = new Link ( data );
         if (isEmpty ()) {
             Tail = node;
         } else {
@@ -23,7 +23,7 @@ public class DoublyLinkedList {
     }
 
     public void InsertLast(int data) {
-        Node node = new Node ( data );
+        Link node = new Link ( data );
         if (isEmpty ()) {
             InsertFirst ( data );
         } else {
@@ -34,11 +34,11 @@ public class DoublyLinkedList {
     }
 
     public void InsertAfter(int index, int data) {
-        Node node = new Node ( data );
+        Link node = new Link ( data );
         if (index == 0) {
             InsertFirst ( data );
         } else {
-            Node n = Head;
+            Link n = Head;
             for (int i = 0; i < index - 1; i++) {
                 n = n.next;
             }
@@ -50,8 +50,8 @@ public class DoublyLinkedList {
         }
     }
 
-    public Node DeleteFirst() {
-        Node temp = Head;
+    public Link DeleteFirst() {
+        Link temp = Head;
         if (Head.next == null)
             Tail = null;
         else
@@ -60,8 +60,8 @@ public class DoublyLinkedList {
         return temp;
     }
 
-    public Node DeleteLast() {
-        Node temp = Tail;
+    public Link DeleteLast() {
+        Link temp = Tail;
         if (Head.next == null)
             Head = null;
         else
@@ -70,8 +70,8 @@ public class DoublyLinkedList {
         return temp;
     }
 
-    public Node deleteKey(int data) {
-        Node n = Head;
+    public Link deleteKey(int data) {
+        Link n = Head;
         while (n.data != data) {
             n = n.next;
             if (n == null)
@@ -90,21 +90,21 @@ public class DoublyLinkedList {
 
     public void DisplayForward() {
         System.out.print ( "List(first --> last): " );
-        Node node = Head;
+        Link node = Head;
         while (node != null) {
             node.displayNode ();
             node = node.next;
         }
-        System.out.println ( "" );
+        System.out.println ();
     }
 
     public void DisplayBackward() {
         System.out.print ( "List(Last --> First): " );
-        Node node = Tail;
+        Link node = Tail;
         while (node != null) {
             node.displayNode ();
             node = node.prev;
         }
-        System.out.println ( "" );
+        System.out.println ();
     }
 }

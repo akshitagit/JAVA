@@ -1,9 +1,7 @@
-import java.util.scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println ("DoublyLinkedList");
-        Scanner sc = new Scanner ( System.in );
-                System.out.println ("DoublyLinked list");
                 DoublyLinkedList dl = new DoublyLinkedList ();
                 dl.InsertFirst ( 22 );
                 dl.InsertFirst ( 44 );

@@ -1,5 +1,4 @@
-// Radix sort Java implementation 
-import java.io.*; 
+// Radix sort Java implementation  
 import java.util.*; 
   
 class RadixSort {

@@ -8,17 +8,16 @@ The expected output will contain all possible positions to place the queens.
 
 import java.util.*;
 
-public class Solution
-{  
+class Solution {
 
-public static void main(String [] args){
+	public static void main(String[] args) {
 
-	Scanner s=new Scanner(System.in);
-  int N=s.nextInt();
-  boolean[][] board=new boolean[N][N];
-	NQueen(board, 0, 0,0, N ,"");
-	
-          }
+		Scanner s = new Scanner ( System.in );
+		int N = s.nextInt ();
+		boolean[][] board = new boolean[N][N];
+		NQueen ( board, 0, 0, 0, N, "" );
+
+	}
 
 public static void NQueen(boolean[][] board, int row, int col, int queensPlaced, int totalQueens, String ans) {
 
@@ -36,18 +35,18 @@ public static void NQueen(boolean[][] board, int row, int col, int queensPlaced,
 			return;
 		}
 
-		if (isItSafeToPlaceQueen(board, row, col)) {
-			board[row][col] = true;
-			NQueen(board, row, col + 1, queensPlaced + 1, totalQueens, ans + "[" + row + "-" + col + "]");
-			board[row][col] = false;
-		}
-		NQueen(board, row, col + 1, queensPlaced, totalQueens, ans);
-
+	if (isItSafeToPlaceQueen ( board, row, col )) {
+		board[row][col] = true;
+		NQueen ( board, row, col + 1, queensPlaced + 1, totalQueens, ans + "[" + row + "-" + col + "]" );
+		board[row][col] = false;
 	}
+	NQueen ( board, row, col + 1, queensPlaced, totalQueens, ans );
 
-	private boolean isItSafeToPlaceQueen(boolean[][] board, int row, int col) {
+}
 
-                
+	private static boolean isItSafeToPlaceQueen(boolean[][] board, int row, int col) {
+
+
 		int r = row - 1;
 		int c = col;
 		while (r >= 0) {
@@ -84,7 +83,6 @@ public static void NQueen(boolean[][] board, int row, int col, int queensPlaced,
 			}
 			r--;
 			c++;
-			;
 		}
 		return true;
 	}

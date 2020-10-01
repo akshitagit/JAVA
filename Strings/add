@@ -1,1 +1,9 @@
-
+import java.util.*;
+class add //add two strings
+{
+public static void main(String a , String b)
+{
+String c=a+b;
+System.out.println(c);
+}
+}

@@ -1,0 +1,99 @@
+-1--->if any vertex unvisited 
+                 0---->if any vertex visited and push into the stack
+                 1---->if any vertex poped(means already complete don't considered) 
+
+                 if any vertex alreay adjacency visited and not poped means in 0 position then graph conation cycle
+
+
+                #include<stdio.h>
+                #include<stdlib.h>
+                #define v 5
+                int arr[v][v];
+                int visited[v];
+
+               struct list
+               {
+	          int data;
+	          struct list *next;
+               };
+               struct list *front=NULL,*rear=NULL;
+               struct list *nn(int data)
+               { 
+                   struct list *ptr;
+                   ptr=(struct list*)malloc(sizeof(struct list));
+                   ptr->data=data;
+                   ptr->next=NULL;
+                   return ptr;
+               }
+
+               void insert(int data)
+               {
+	          struct list *ptr,*ptr1;
+	          ptr=nn(data);
+	          if(front==NULL)
+	          front=rear=ptr;
+	          else
+	          {
+	            rear->next=ptr;
+	            rear=ptr;  
+	          }    
+               }
+
+               int delete()
+               {
+	         int data;
+	         struct list *ptr;
+	         ptr=front;
+	         front=front->next;
+	         data=ptr->data;
+	         free(ptr);
+	         return data;
+               }
+
+                void Bfs()
+                {
+    	            int x,i,flag=0;
+		    x=delete();
+		    visited[x]=1;
+		    for(i=0;i<v;i++)
+		    {
+	    	       if(arr[x][i]==1)
+		       {
+		  	  if(visited[i]==-1)
+			  {
+			    insert(i);
+			    visited[i]=0;
+		          }
+		          else if(visited[i]==0)
+		          {
+		    	    flag=1;
+		    	    break;
+			  }
+		       }
+	           }
+	           if(flag==1)
+	              printf("Graph conatin cycle ");
+	           else 
+	           {
+	              if(front!=NULL)
+	                 Bfs();
+	              else
+		         printf("Graph conaion no cycle ");
+	           }
+                }
+
+                void main()
+                {
+	           int i,j,root;
+	           printf("enter adjacency matrix:\n");
+	           for(i=0;i<v;i++)
+	              for(j=0;j<v;j++)
+	                 scanf("%d",&arr[i][j]);
+	           for(i=0;i<v;i++)
+	               visited[i]=-1;    
+	           printf("from where you wnat to start : ");
+	           scanf("%d",&root);
+	           insert(root);
+	           visited[root]=0;
+	           Bfs();
+                 }

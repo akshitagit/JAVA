@@ -1,5 +1,3 @@
-package practice;
-
 import java.util.*; 
 import java.util.Collections; 
 

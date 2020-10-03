@@ -4,7 +4,7 @@ public class DecimalToOctal {
 
         int number = Integer.parseInt(args[0]);
 
-        final int decimalNumber = number;
+        final int decimalNumberr = number;
 
         int octalNumber = 0;
 

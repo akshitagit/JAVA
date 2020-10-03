@@ -2,7 +2,7 @@ public class DecimalToOctal {
 
     public static void main(String[] args) {
 
-        int number = Integer.parseInt(args[0]);
+        int number = Integer.parsefInt(args[0]);
 
         final int decimalNumberr = number;
 

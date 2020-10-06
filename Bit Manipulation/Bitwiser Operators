@@ -1,0 +1,42 @@
+        Bitwise OR (|) –
+This operator is binary operator, denoted by ‘|’. It returns bit by bit OR of input values, i.e, if either of the bits is 1, it gives 1, else it gives 0.
+For example,
+
+a = 5 = 0101 (In Binary)
+b = 7 = 0111 (In Binary)
+
+Bitwise OR Operation of 5 and 7
+  0101
+| 0111
+ ________
+  0111  = 7 (In decimal) 
+
+        Bitwise AND (&) –
+This operator is binary operator, denoted by ‘&’. It returns bit by bit AND of input values, i.e, if both bits are 1, it gives 1, else it gives 0.
+For example,
+
+a = 5 = 0101 (In Binary)
+b = 7 = 0111 (In Binary)
+
+Bitwise AND Operation of 5 and 7
+  0101
+& 0111
+ ________
+  0101  = 5 (In decimal) 
+
+        Bitwise XOR (^) –
+This operator is binary operator, denoted by ‘^’. It returns bit by bit XOR of input values, i.e, if corresponding bits are different, it gives 1, else it gives 0.
+For example,
+
+a = 5 = 0101 (In Binary)
+b = 7 = 0111 (In Binary)
+
+Bitwise XOR Operation of 5 and 7
+  0101
+^ 0111
+ ________
+  0010  = 2 (In decimal) 
+
+    Bitwise Complement (~) –
+This operator is unary operator, denoted by ‘~’. It returns the one’s compliment representation of the input value, i.e, with all bits inversed, means it makes every 0 to 1, and every 1 to 0.
+For example,

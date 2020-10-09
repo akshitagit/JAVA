@@ -1,0 +1,19 @@
+public class Knapsack01 {
+public static int knapsackDP(int[] weight,int value[],int maxWeight){
+
+		int []dp = new int[maxWeight+1]; 
+	      
+	    for(int i=0; i <  value.length; i++)  
+	      
+	        for(int j = maxWeight; j >= weight[i]; j--) 
+	            dp[j] = Math.max(dp[j] , value[i] + dp[j - weight[i]]); 
+	    return dp[maxWeight]; 
+		}
+   
+public static void main(String[] args) {
+	int weights[]= {6,1,2,4,5};
+	int values[]= {10,5,4,8,6};
+	int maxWeight=5;
+	System.out.println(knapsackDP(weights, values, maxWeight));
+}
+}

@@ -5,6 +5,9 @@
 ![Forks](https://img.shields.io/github/forks/akshitagit/JAVA)
 ![Stars](https://img.shields.io/github/stars/akshitagit/JAVA)
 
+
+# REPOSITORY MAINTAINER : ![AKSHITA GUPTA](https://github.com/akshitagupta15june) 
+
 ## Open Repository For Students to Contribute Algorithms and Data Structures in different Languages
 
 ## This Repository is meant for everyone to create code and learn to contribute to open source

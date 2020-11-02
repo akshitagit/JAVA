@@ -1,0 +1,5 @@
+public class IsPalindrome{
+    public static boolean isPalindrome(String str){
+        return str.equals(new StringBuffer(str).reverse().toString());
+    }
+}

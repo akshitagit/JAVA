@@ -1,4 +1,4 @@
-public class minimum_cost_path {
+public class MinimumCostPath {
 public static int minCostPathDP(int arr[][]) {
 	  int  m=arr.length;
 		int n=arr[0].length;

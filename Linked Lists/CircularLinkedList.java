@@ -1,6 +1,6 @@
 Circular LInkedlist #2
 
-class CircularLInkedlist {
+class CircularLinkedList {
 
     // node  
     static class Node {

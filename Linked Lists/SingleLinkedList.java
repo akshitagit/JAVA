@@ -201,7 +201,7 @@ final class Node<T> {
     }
 }
 
-public class SinglyLinkedList {
+public class SingleLinkedList {
     public static void main(String[] args) {
         Node<Integer> a = new Node<Integer>(5);
         a.insertLast(4);

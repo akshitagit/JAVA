@@ -3,7 +3,7 @@ package hacktober;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Max_sum_circular_array {
+public class MaxSumCircularArray {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

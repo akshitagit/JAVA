@@ -3,7 +3,7 @@ package Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Rotate_an_array_to_the_left_by_3_position {
+public class RotateArrayByThreePosition {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

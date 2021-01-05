@@ -7,7 +7,7 @@ import java.util.LinkedList;
  * Ex: [1,0,1] the program should return 5
  * Solution: We first iterate the list to get the number and the size, and the iteratively we find the number
  */
-public class getDecimalValue {
+public class GetDecimalValue {
 
     public int getListValue(LinkedList head) {
 

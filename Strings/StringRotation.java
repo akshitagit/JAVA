@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
  
-class string_rotation 
+class StringRotation 
 {
          
     // method that rotates s towards left by d 

@@ -1,5 +1,5 @@
 import java.util.*;
-class stringremoveduplicate
+class StringRemoveDuplicate
 {
 	public static void main(String[] args) 
 	{

@@ -14,7 +14,7 @@ import java.io.*;
  * @author Jetty53
  */
 
-class chocolateDistribution {
+class ChocolateDistribution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

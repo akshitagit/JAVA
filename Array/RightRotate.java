@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*; 
   
-class right_rotate
+class RightRotate
 { 
   
 //function to rotate the array to the right by k positions

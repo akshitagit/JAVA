@@ -1,7 +1,7 @@
 /* Java program to solve Rat in 
  a Maze problem using backtracking */
   
-public class RatMaze { 
+class RatMaze {
   
     // Size of the maze 
     static int N; 

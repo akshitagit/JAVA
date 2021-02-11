@@ -1,4 +1,6 @@
-class InsertionSort { 
+import java.util.Scanner;
+
+class InsertionSort {
     void sort(int arr[]) 
     { 
         int n = arr.length; 
@@ -25,7 +27,7 @@ class InsertionSort {
   
     public static void main(String args[]) 
     { 
-        Scanner sc = new Scannner(System.in);
+        Scanner sc = new Scanner(System.in);
         int n =sc.nextInt();
         int[] arr = new int[n];
         for(int i=0;i<n;i++){

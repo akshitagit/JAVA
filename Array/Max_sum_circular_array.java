@@ -16,7 +16,7 @@ public class Max_sum_circular_array {
 			arr[i] = sc.nextInt();
 		}
 
-		System.out.println(maxSumCircular(arr));
+		System.out.println("Maximum Sum Circular Array Sum="+maxSumCircular(arr));
 	}
 		private static int maxSumCircular(int[] A) {
 			// TODO Auto-generated method stub

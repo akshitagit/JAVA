@@ -1,0 +1,26 @@
+//Largest sum subarray
+//kadane's algo.
+// Time Complexity : 0(n)
+
+import java.util.*;
+public class LargestSumSubarray {
+    public static void main(String[] args) {
+        int i,n,currsum,max;
+       max=Integer.MIN_VALUE;
+        currsum=0;
+        
+        int a[]={2, 7, 6, 1, 4, 5};
+        n=a.length;
+        for(i=0;i<n;i++){
+            currsum+=a[i];
+            if(currsum>max){
+                max=currsum;
+            }
+            if(currsum<0){
+                currsum=0;
+            }
+        }
+        System.out.println(max);
+     
+    }
+}

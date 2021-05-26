@@ -1,20 +1,35 @@
 public class StringCompression {
 
-	void printCompressedString(String s)
-	{
-		for (int i = 0; i < s.length(); i++) {
-			int count = 1;
-			while (i < s.length() - 1 && s.charAt(i) == s.charAt((i++) + 1))
-				count++;
+	void printCompressedString(String input) {
+		String compressedWord = "";
+		boolean areTheySame = false;
+		int counter = 1;
 
-			System.out.print(s.charAt(i));
-			System.out.print(count);
+		for (int index = 0; index < input.length(); index++) {
+			final char letter = input.charAt(index);
+			if (index < input.length() - 1) {
+				final char nextLetter = input.charAt(index + 1);
+				if (letter == nextLetter) {
+					counter++;
+					areTheySame = true;
+				} else if (areTheySame) {
+					compressedWord += String.valueOf(letter) + counter;
+					counter = 1;
+					areTheySame = false;
+				} else {
+					compressedWord += String.valueOf(letter) + counter;
+				}
+			} else {
+				compressedWord += String.valueOf(letter) + counter;
+			}
 		}
+		System.out.println(compressedWord);
 	}
 
+
 	public static void main(String[] args) {
-		StringCompression sc = new StringCompression();
-		String s = "hhhaaaccckkktttooobbbeeerrr";
-		sc.printCompressedString(s);
+		StringCompression compression = new StringCompression();
+		String input = "hhhaaaccckkktttooobbbeeerrr";
+		compression.printCompressedString(input);
 	}
 }

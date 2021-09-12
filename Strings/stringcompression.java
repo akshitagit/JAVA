@@ -16,7 +16,6 @@ class stringcompression
 			}
 			if(c!=0)
 			System.out.print(ch+""+c);
-
 		}
 	}
 }

@@ -15,6 +15,7 @@ public class DecimalToOctal {
             number /= 8;
             multiplier *= 10;
         }
+        
         System.out.println("Converted decimal number '" + decimalNumber
                 + "' to octal number '" + octalNumber + "'");
     }
